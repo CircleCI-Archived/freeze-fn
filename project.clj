@@ -1,4 +1,4 @@
-(defproject circle/freeze-fn "0.1.1"
+(defproject circle/freeze-fn "0.1.2"
   :description "A library for serializing Clojure fn calls"
   :dependencies []
   :dev-dependencies [[org.clojure/clojure "1.3.0"]]

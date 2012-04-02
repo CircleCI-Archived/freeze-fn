@@ -11,6 +11,10 @@
 (defrecord SerializableFn [v args]
   clojure.lang.IFn
   (invoke [this]
+    (call* this))
+  (call [this] ;; j.u.c.Concurrent
+    (call* this))
+  (run [this] ;; j.l.Runnable
     (call* this)))
 
 (defn save
