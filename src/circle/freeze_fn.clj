@@ -2,6 +2,7 @@
 
 (defn resolve-var-str [s]
   (let [[_ ns v] (re-find #"#'([^/]+)/(.+)" s)]
+    (require (symbol ns))
     (ns-resolve (symbol ns) (symbol v))))
 
 (defn call* [pfn]
